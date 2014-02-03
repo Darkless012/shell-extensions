@@ -1,0 +1,10 @@
+# Ignore everything
+*
+
+# But not aliases
+!LICENSE
+!README.md
+!*.aliases
+
+# Exclude private
+private.aliases

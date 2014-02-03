@@ -1,0 +1,2 @@
+# you have to have installed "libnotifyX" where is is version (currently 4)
+function timer() { sleep "$1" && (notify-send "${*:2}" & mplayer ~/.alarm.ogg -really-quiet) ;}
