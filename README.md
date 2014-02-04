@@ -20,14 +20,14 @@ Then you can create a directory under home and clone this repo.
 
 
 # Special dependencies
-If there is aditional dependency or information, that should be considered, it is stated in below.
+All aditional dependencies or information, that should be considered are stated below.
 
 ## misc.aliases
 ### timer
-This function requires and file to be played as an alarm sound. So far I don't have any licenced to include.
-But it would be nice to get one right inside this repo.
+This function requires a file to be played as an alarm sound. It would be nice to get one right inside this repo.
+Also it uses mplayer.
 
-So far it takes a file
+So far timer plays the file:
 
     ~/.alarm.ogg
 
