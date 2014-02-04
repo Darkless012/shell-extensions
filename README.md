@@ -17,3 +17,18 @@ Then you can create a directory under home and clone this repo.
 
     git clone https://github.com/Darkless012/bash_aliases.git ~/.bash_aliases
     source ~/.bashrc
+
+
+# Special dependencies
+If there is aditional dependency or information, that should be considered, it is stated in below.
+
+## misc.aliases
+### timer
+This function requires and file to be played as an alarm sound. So far I don't have any licenced to include.
+But it would be nice to get one right inside this repo.
+
+So far it takes a file
+
+    ~/.alarm.ogg
+
+
