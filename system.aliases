@@ -10,3 +10,5 @@ alias ff="find ./ -iname $1"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
+
+alias mkcd='_(){ mkdir $1; cd $1; }; _'
