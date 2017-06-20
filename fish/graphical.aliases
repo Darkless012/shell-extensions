@@ -1,0 +1,26 @@
+function set_monitors --argument-names 'monitor'
+
+    if test -n "$monitor"
+      # Both
+      xrandr --output DVI-I-1 --mode 1680x1050 --pos 0x150 --rotate normal --output DVI-I-2 --mode 1920x1200 --pos 1680x0 --rotate normal
+
+    else
+        switch $monitor
+        case dell
+            echo "Setting DELL monitor on"
+            # On DELL
+            xrandr --output DVI-I-1 --off --output DVI-I-2 --mode 1920x1200 --pos 0x0 --rotate normal
+
+        case hp
+            echo "Sending HP monitor on"
+            # On HP
+            xrandr --output DVI-I-1 --mode 1680x1050 --pos 0x0 --rotate normal --output DVI-I-2 --off
+
+        case '*'
+            echo "Unknown parameter specify 'hp / dell'"
+
+        end
+    end
+end
+
+alias monitor   'set_monitors'

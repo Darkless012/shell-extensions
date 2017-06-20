@@ -1,0 +1,5 @@
+# you have to have installed "libnotifyX" where is is version (currently 4)
+function timer() { sleep "$1" && (notify-send "${*:2}" & mplayer ~/.alarm.ogg -really-quiet) ;}
+
+# you have to have vivaldi browser installed
+function vivaldip { PROFILE_DIR=$HOME/.config/vivaldi/Profiles/ ; mkdir -p $PROFILE_DIR/$1 ; vivaldi --user-data-dir=$PROFILE_DIR/$1 ; } 

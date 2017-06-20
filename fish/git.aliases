@@ -1,0 +1,2 @@
+alias gpd   'git push origin develop'
+alias gpm   'git push origin master'

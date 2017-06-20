@@ -1,0 +1,14 @@
+function mkcd
+  mkdir $argv
+  and cd $argv
+end
+
+alias ports 'netstat -tulanp'
+alias psg   'ps -aux | grep $1'
+alias ff    'find ./ -iname $1'
+
+alias ..    'cd ..'
+alias ...   'cd ../..'
+alias ....  'cd ../../..'
+
+alias o     'xdg-open $1'
