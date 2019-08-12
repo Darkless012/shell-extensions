@@ -12,3 +12,31 @@ alias ...   'cd ../..'
 alias ....  'cd ../../..'
 
 alias o     'xdg-open $1'
+
+alias clonetab 'guake -n (pwd)'
+
+function read_confirm --description 'Ask the user for confirmation' --argument prompt
+    if test -z "$prompt"
+        set prompt "Continue?"
+    end
+
+    while true
+        read -p 'set_color green; echo -n "$prompt [y/N]: "; set_color normal' -l confirm
+
+        switch $confirm
+            case Y y
+                return 0
+            case '' N n
+                return 1
+        end
+    end
+end
+
+function fix_folder_permissions
+  if read_confirm
+    find . -type f -print0 | xargs -0 chmod 644
+    find . -type d -print0 | xargs -0 chmod 755
+  end
+end
+
+alias restart_cinnamon 'pkill -HUP -f "cinnamon --replace"'
